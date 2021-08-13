@@ -16,10 +16,12 @@ class Usersl extends Seeder
      */
     public function run()
     {
-        Usersl::create([
-            'name' => 'kinyera amos',
-            'email' => 'kinyeramo@gmail.com',
-            'password' => '123445'
+        DB::table('usersl')->insert([
+            'name'=>str::random(5),
+            'email'=>str::random(5).'@gmail.com',
+            'password' => Hash::make('password')
+
         ]);
+
     }
 }

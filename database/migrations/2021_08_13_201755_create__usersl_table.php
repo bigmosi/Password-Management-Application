@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserslsTable extends Migration
+class CreateUserslTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUserslsTable extends Migration
      */
     public function up()
     {
-        Schema::create('usersls', function (Blueprint $table) {
+        Schema::create('usersl', function (Blueprint $table) {
             $table->id();
             $table->text('name');
             $table->text('email');
@@ -29,6 +29,6 @@ class CreateUserslsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usersls');
+        Schema::dropIfExists('usersl');
     }
 }
