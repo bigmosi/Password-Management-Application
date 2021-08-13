@@ -17,8 +17,9 @@
               Post Details
             </div>
             <div class="card-body">
-               <h1>{{$post->title}}</h1>
-               <p>{{$post->body}}</p>
+               <p>{{$post->name}}</p>
+               <p>{{$post->username}}</p>
+               <p>{{$post->password}}</p>
             </div>
           </div>
         </div>

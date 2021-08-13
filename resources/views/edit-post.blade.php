@@ -26,12 +26,15 @@
               <form method="POST" action="{{route('post.update')}}">
                 @csrf  
                 <div class="form-group">
-                  <label for="title">Post Title</label>
-                  <input type="text" name="title" class="form-control" placeholder="Enter Post Title" value="{{$post->title}}" />
+                  <label for="name">Name</label>
+                  <input type="text" name="name" class="form-control" placeholder="Enter Name" value="{{$post->name}}" />
                 </div>
                 <div class="form-group">
-                  <label for="body">Post Description</label>
-                  <textarea name="body" class="form-control" rows="3">{{$post->body}}</textarea>
+                  <label for="email">Email</label>
+                  <input type="text" name="username" class="form-control" placeholder="Enter Username" value="{{$post->username}}" />
+                </div>
+                <div class="form-group">
+                  <input type="text" name="password" class="form-control" placeholder="Enter Password">
                 </div>
                 <button type="submit" class="btn btn-success">Update Post</button>
               </form>
