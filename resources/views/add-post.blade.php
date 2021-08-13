@@ -27,14 +27,17 @@
                 <div class="form-group">
                   <label for="title">Name</label>
                   <input type="text" name="name" class="form-control" placeholder="Enter Your Name" />
+                  <span class="text-danger">@error('name'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group">
                   <label for="name">User Name</label>
                   <input type="text" name="username" class="form-control" placeholder="Enter Username">
+                  <span class="text-danger">@error('username'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input type="text" name="password" class="form-control" placeholder="Enter Password">
+                  <span class="text-danger">@error('password'){{ $message }}@enderror</span>
                 </div>
                 <button type="submit" class="btn btn-success">Add Post</button>
               </form>

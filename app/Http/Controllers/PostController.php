@@ -13,6 +13,12 @@ class PostController extends Controller
     }
 
     public function createPost(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required|min:5|max:255',
+            'password' => 'required|min:5|max:12'
+        ]);
+   
         $post = new Post();
         $post->name = $request->name;
         $post->username = $request->username;
@@ -43,11 +49,16 @@ class PostController extends Controller
     }
     public function updatePost(Request $request)
     {
-        $post = Post::find($request->id);
-        $post->name = $request->name;
-        $post->username = $request->username;
-        $post->password = $request->password;
-        $post->save();
-        return back()->with('post_updated', 'Post has been updated successfull');
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required|min:5|max:255',
+            'password' => 'required|min:5|max:12'
+        ]);  
+         $post = Post::find($request->id);
+         $post->name = $request->name;
+         $post->username = $request->username;
+         $post->password = $request->password;
+         $post->save();
+         return back()->with('post_updated', 'Post has been updated successfull');
     }
 }

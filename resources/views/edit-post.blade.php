@@ -22,20 +22,23 @@
                      {{Session::get('post_updated')}}
                  </div>
               @endif
-                <input type="hidden" name="id" value="{{$post->id}}" />
+              <input type="hidden" name="id" value="{{$post->id}}" />
               <form method="POST" action="{{route('post.update')}}">
                 @csrf  
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input type="text" name="name" class="form-control" placeholder="Enter Name" value="{{$post->name}}" />
+                  <span class="text-danger">@error('name'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group">
                   <label for="username">Username</label>
                   <input type="text" name="username" class="form-control" placeholder="Enter Username" value="{{$post->username}}" />
+                  <span class="text-danger">@error('username'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input type="text" name="password" class="form-control" placeholder="Enter Password">
+                  <span class="text-danger">@error('password'){{ $message }}@enderror</span>
                 </div>
                 <button type="submit" class="btn btn-success">Update Post</button>
               </form>

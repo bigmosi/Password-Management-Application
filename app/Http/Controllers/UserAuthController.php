@@ -15,7 +15,7 @@ class UserAuthController extends Controller
     
  function check(Request $request){
      $request->validate([
-         'email' => 'required|email',
+         'email' => 'required|email|unique:usersl',
          'password' => 'required|min:5|max:12'
      ]);
 
@@ -23,7 +23,7 @@ class UserAuthController extends Controller
      
  }
  
- public function logout(Request $request){
+   function logout(Request $request){
 
     Auth::logout();
 
