@@ -19,9 +19,9 @@
             <div class="card-body">
               @if(Session::has('post_updated'))
                  <div class="alert alert-success" role="alert">
-                   {{Session::get('post_created')}}
+                     {{Session::get('post_updated')}}
                  </div>
-                @endif
+              @endif
                 <input type="hidden" name="id" value="{{$post->id}}" />
               <form method="POST" action="{{route('post.update')}}">
                 @csrf  
@@ -30,10 +30,11 @@
                   <input type="text" name="name" class="form-control" placeholder="Enter Name" value="{{$post->name}}" />
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
+                  <label for="username">Username</label>
                   <input type="text" name="username" class="form-control" placeholder="Enter Username" value="{{$post->username}}" />
                 </div>
                 <div class="form-group">
+                  <label for="password">Password</label>
                   <input type="text" name="password" class="form-control" placeholder="Enter Password">
                 </div>
                 <button type="submit" class="btn btn-success">Update Post</button>

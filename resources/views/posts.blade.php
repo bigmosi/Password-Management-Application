@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
+<a href="/logout" class="btn btn-primary">Log Out</a>
   <section style="padding-top:60px;">
     <div class="container">
       <div class="row">
@@ -43,7 +44,6 @@
                         <a href="/posts/{{$post->id}}" class="btn btn-info">Details</a>
                         <a href="/edit-post/{{$post->id}}" class="btn btn-success">Edit</a>
                         <a href="/delete-post/{{$post->id}}" class="btn btn-danger">Delete</a>
-                        <a href="logout" class="btn btn-primary">Logout</a>
                       </td>
                     </tr>
                   @endforeach

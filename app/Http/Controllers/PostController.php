@@ -41,7 +41,7 @@ class PostController extends Controller
         $post = Post::find($id);
         return view('edit-post', compact('post'));
     }
-    public function updatePost(request $request)
+    public function updatePost(Request $request)
     {
         $post = Post::find($request->id);
         $post->name = $request->name;
