@@ -14,7 +14,6 @@ use App\Http\Controllers\UserAuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('add-post', [PostController::class, 'addPost']);
 Route::post('/create-post', [PostController::class, 'createPost'])->name('post.create');
 Route::get('/posts', [PostController::class, 'getPost']);
